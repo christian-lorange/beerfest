@@ -1,0 +1,422 @@
+body, h1, h2, h3, p {font-family: "Arial Black", Gadget, sans-serif;}
+
+p {padding: 3px;
+text-align: center;}
+
+.container {
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+  };
+
+td, th {
+	text-align: center;
+	padding: 3px;
+}
+
+table {
+	margin-bottom: 40px;
+}
+
+table, td, th, input {
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	color: #555;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+input {
+	padding: 4px 12px;
+}
+
+label {
+	margin-right: 14px;
+}
+
+.content-margin {
+	margin-top: 75px;
+}
+
+.person-filter {
+	margin-bottom: 25px;
+}
+
+.person-filter > li > a {
+	padding: 8px 12px;
+	font-size: 12px;
+}
+
+.hidden {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  height: 100%;
+  overflow: scroll;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+
+
+
+.wrap {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+thead {
+    display: none;
+}
+
+tr {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    margin-bottom:0px;
+  
+    box-shadow: 0 0 1rem transparentize( black, 0.9 );
+}
+
+tr:nth-child(even) {background: white}
+tr:nth-child(odd) {background: #c7eaea}
+
+td {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: white;
+    border: 1px solid transparentize( #58C25F, 0.5 );
+
+}
+
+td:before {
+    float: left;
+    margin: -0.5rem 0.5rem -0.5rem -0.5rem;
+    padding: 0.625rem 0.5rem 0.625rem;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: transparentize( #58C25F, 0.9 );
+    color: #58C25F;
+}
+
+td[data-label="Column D"] {
+    display: block;
+    float: none;
+
+    &:before {
+        display: block;
+        margin-right: -0.5rem;
+        margin-bottom: 0.5rem;
+        float: none;
+    }
+}
+
+td:empty {
+    display: none;
+}
+
+td.tpl {
+width:13vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+
+box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-weight: bold;
+font-size: 0.7em;
+
+}
+
+td.tpr {
+width:36vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+
+box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-weight: bold;
+font-size: 0.7em;
+}
+
+td.middlerow {
+width:92.0vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 5px;
+border-radius: 15px;
+box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-weight: bold;
+background-color: #FAD7A0;
+font-size: 0.9em;
+}
+
+.middlerow button{
+  background-color: transparent;
+  border:none;
+  color:#555;
+  padding-bottom: 2px;
+
+}
+
+td.bottomrow {
+width:78.7vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 3px;
+box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 40px;
+font-weight: bolder;
+background-color: #FAD7A0;
+font-size: 0.9em;
+}
+
+
+td.heart {
+width:11vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 3px;
+background-color: transparent;
+border:none;
+font-weight: bolder;
+font-size: 2em;
+padding-left:0;
+
+}
+.heart a{
+  color: black;
+}
+
+
+td.bottomrow a {color: white;}
+td.bottomrow button {
+  width:45.7vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 0px;
+background-color: transparent;
+color: #555;
+border: none;
+font-weight: bold;
+
+margin-top: -4px;
+margin-left: -6px;}
+
+button#sT {
+  width:98vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 0px;
+background-color: transparent;
+color: #555;
+border: none;
+font-weight: bold;
+
+margin-top: -4px;
+margin-left: -6px;}
+
+#myInput {
+  width:80.5vw;
+  margin-left: 2vw;
+  height: 50px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#clearbutton {
+  width:10vw;
+  height: 50px;
+    font-weight: bolder;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2.5em;
+  color: red;
+  background-color: transparent;
+  border:none;
+}
+.menu{
+    margin:20px;
+}
+
+
+nav {
+ box-sizing: border-box;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ padding: 20px 0px;
+ text-align: center;
+ background-color: #333;
+ font-size: 14px;
+ letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eee;
+  padding: 1px 0;
+  margin: 0 10px;
+  transition: all 0.15s ease-in-out;
+}
+.hov-color-red.is-current,
+.hov-color-red:hover {
+   color: #ff765a;
+}
+.hov-color-green.is-current,
+.hov-color-green:hover {
+  color: #5aff8c;
+}
+.hov-color-blue.is-current,
+.hov-color-blue:hover {
+  color: #5acbff;
+}
+
+.wide {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+}
+#schedule {
+  background-color: #1d8c51;
+  padding-top: 80px;
+}
+#favorites {
+  background-color: #c9c486;
+  padding-top: 80px;
+}
+#faq {
+  background-color: #1d8c51;
+  padding-top: 80px;
+}
+
+#foco {
+  background-color: white;
+    padding-top: 60px;
+    padding-bottom:30px;
+}
+
+h1.headers {
+  text-align: center;
+  color: white;
+}
+
+img.sponsor {width:30%;
+vertical-align: middle !important;}
+
+.sponsor {text-align: center;}
+
+.artist {
+  text-align: center;
+
+}
+
+.artist a {
+  color:black !important;
+  font-weight: bold;
+}
+
+p.artist  {
+  padding: 5px;
+  font-size: 0.8em;
+}
+
+img.artist {width: 80%;}
+
+a.artist {text-align: center;
+  color:black;
+font-weight: bold;
+padding: 10px;}
