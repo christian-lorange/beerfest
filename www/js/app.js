@@ -13,8 +13,29 @@ $(function() {
 
    $("#SECOND").on("click",'a', function(){
        moveRow($(this).parents("tr").clone(), $("#FIRST"), "X");
+
+          var num = Math.floor(Math.random()*1000000000);
+          $("#FIRST #rem").attr('id', num);
+           var num = Math.floor(Math.random()*1000000000);
+          $("#FIRST #rem_star").attr('id', num);
        sortTable();
+       local();
+       
+       /* Look for and remove duplicate rows */
+       var seen = {};
+        $('table tr').each(function() {
+          var txt = $(this).text();
+          if (seen[txt])
+            $(this).remove();
+          else
+            seen[txt] = true;
+        });
+      /*End - Look for and remove duplicate rows */
+      
+
        document.getElementById('favorites').scrollIntoView();
+       location.reload();
+     
    });
    $('#FIRST,#SECOND').on('click','a',function() {
      localStorage.setItem('FIRST',$('#FIRST').html());
@@ -109,7 +130,6 @@ tables.each(function(table) {
     });
   });
 });
-
 
 
 

@@ -1,3 +1,9 @@
+html,body {
+     margin:0 auto; 
+    width:100%;
+    text-align:center;
+}
+
 body, h1, h2, h3, p {font-family: "Arial Black", Gadget, sans-serif;}
 
 p {padding: 3px;
@@ -11,10 +17,27 @@ text-align: center;}
 td, th {
 	text-align: center;
 	padding: 3px;
+ 
 }
+
+th {
+  width:48vw !important;
+  text-align: center;
+  border:none !important;
+
+}
+
+.FIRST th {
+  width:35vw !important;
+  text-align: center;
+  border:none !important;
+
+}
+
 
 table {
 	margin-bottom: 40px;
+  text-align: center;
 }
 
 table, td, th, input {
@@ -145,16 +168,22 @@ img.hover-shadow {
 }
 
 thead {
-    display: none;
+    display: block;
+
+}
+
+#FIRST thead {
+    display: block;
 }
 
 tr {
     display: block;
     margin-bottom: 1.5rem;
-    padding: 1rem 0.5rem 0.5rem 1rem;
+   
     margin-bottom:0px;
   
     box-shadow: 0 0 1rem transparentize( black, 0.9 );
+
 }
 
 tr:nth-child(even) {background: white}
@@ -197,17 +226,30 @@ td:empty {
 }
 
 td.tpl {
-width:13vw !important;
+width:44.0vw !important;
 text-align: center;
 height: 35px;
 vertical-align: middle !important;
 padding-top: 5px;
-
+border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
 font-size: 0.7em;
-
+background-color: #FAD7A0;
 }
+td.tpl button {
+  width:45.7vw !important;
+text-align: center;
+height: 35px;
+vertical-align: middle !important;
+padding-top: 0px;
+background-color: transparent;
+color: #555;
+border: none;
+font-weight: bold;
+
+margin-top: -4px;
+margin-left: -6px;}
 
 td.tpr {
 width:36vw !important;
@@ -221,16 +263,25 @@ font-weight: bold;
 font-size: 0.7em;
 }
 
+td.logo_banner {
+width:98vw !important;
+text-align: center;
+vertical-align: middle !important;
+padding-top: 5px;
+background:none;
+border:none;
+}
+
 td.middlerow {
-width:92.0vw !important;
+width:38.0vw !important;
 text-align: center;
 height: 35px;
 vertical-align: middle !important;
 padding-top: 5px;
-border-radius: 15px;
+
 box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
-background-color: #FAD7A0;
+
 font-size: 0.9em;
 }
 
@@ -243,16 +294,20 @@ font-size: 0.9em;
 }
 
 td.bottomrow {
-width:78.7vw !important;
+width:18vw !important;
 text-align: center;
 height: 35px;
 vertical-align: middle !important;
 padding-top: 3px;
 box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-border-radius: 40px;
+
 font-weight: bolder;
-background-color: #FAD7A0;
+
 font-size: 0.9em;
+}
+
+.FIRST td.bottomrow {
+  display: none;
 }
 
 
@@ -371,13 +426,28 @@ a {
   min-height: 100vh;
 }
 #schedule {
-  background-color: #1d8c51;
+
   padding-top: 80px;
+  background: url("../img/beer_bkgd_1.jpg") no-repeat;
 }
+
+#schedule h1 {
+  background-color: black;
+  padding: 10px;
+  padding-top:7px;}
+
+
 #favorites {
-  background-color: #c9c486;
+   background: url("../img/beer_bkgd_2.jpg") no-repeat;
   padding-top: 80px;
 }
+
+#favorites h1 {
+  background-color: black;
+  padding: 10px;
+  padding-top:7px;}
+
+
 #faq {
   background-color: #1d8c51;
   padding-top: 80px;
@@ -396,6 +466,19 @@ h1.headers {
 
 img.sponsor {width:30%;
 vertical-align: middle !important;}
+
+img.brew_logo {height:60px;
+vertical-align: middle !important;
+background:none;}
+
+td.logo_banner button {
+  width:45.7vw !important;
+text-align: center;
+padding-top: 0px;
+background-color: none;
+border: none;
+background:none;
+}
 
 .sponsor {text-align: center;}
 
@@ -420,3 +503,30 @@ a.artist {text-align: center;
   color:black;
 font-weight: bold;
 padding: 10px;}
+
+/* Hide ratings in main table 
+table#SECOND td:nth-child(7) {
+    display: none
+} {display: none;}
+*/
+
+
+/* Star Rating */
+
+
+
+
+
+.SECOND td.rating{
+  display: none !important;
+};
+
+
+/* Padding around filters */
+select.table-autofilter {
+    margin-left: 5px !important;
+}
+
+.rating {
+  width:22vw !important;
+ }
