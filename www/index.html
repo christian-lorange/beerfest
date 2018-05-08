@@ -18,7 +18,7 @@ select.table-autofilter {
 
 
 
- <script src="js/admob2.js"></script>
+ <!--<script src="js/admob2.js"></script>-->
  <script src="js/jquery-3.2.1.js"></script>
 
 
@@ -174,7 +174,7 @@ function CallButton()
 
 
         <tr class="content">
-            <td class="sortnr" style="display:none;">1</td>
+            <td class="sortnr" style="display:none;">2</td>
             <td class="logo_banner"><button onclick="openModal();currentSlide(384)"><img src="img/breweries/2.jpg" class="brew_logo"></button></td>
              <td class="tpl">Sunny Suds</td>
             <td class="tpl"><button onclick="openModal();currentSlide(384)">Bucks Sour</button></td>
@@ -202,6 +202,32 @@ function CallButton()
 
 
 
+        <tr class="content">
+            <td class="sortnr" style="display:none;">3</td>
+            <td class="logo_banner"><button onclick="openModal();currentSlide(384)"><img src="img/breweries/2.jpg" class="brew_logo"></button></td>
+             <td class="tpl">Sunny Suds</td>
+            <td class="tpl"><button onclick="openModal();currentSlide(384)">Bucks Sour</button></td>
+            <td class="middlerow">Sour</td>
+            <td class="bottomrow">9.7%</td>
+            <td class="bottomrow">35 IBU</td>
+            <td class="rating">
+<select name="my_input" class="remember-selection" id="rem_star">
+                      <option value="0" selected="selected">Score</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+            </td>
+                        
+
+           
+            <td class="heart">
+                <a href="#favorites">&#9829;</a>
+            </td>
+        </tr>
         
 
 
@@ -396,7 +422,7 @@ document.querySelector('#clearbutton').addEventListener('click', filterTable, fa
 <button id="showAd" style="text-align: center;margin: auto; width: 100vw; height:40px; background: black; color: white; font-weight: bolder;">Show Some Support by Looking at an Ad!</button>
 <script type="text/javascript" src="cordova.js"></script>
 
-<script type="text/javascript" src="js/admob2.js"></script>
+<!--<script type="text/javascript" src="js/admob2.js"></script>-->
 <script type="text/javascript" src="phonegap.js"></script>
 
 <!--Script to change _blank hrefs to exteral  -->

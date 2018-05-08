@@ -2,12 +2,12 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.orangehousefocomx.app"
-        version   = "1.0.4">
+        id        = "com.orangehousebeerfes.app"
+        version   = "1.0.0">
 
-    <name>FoCo Gorilla Music</name>
+    <name>BeerFest</name>
 
-    <description>View the schedule of the FoCoMX music festival and save your favorite shows to your personal list.</description>
+    <description>BeerFest App Example</description>
 
     <author href="http://orangehousellc.com" email="lorange.christian@gmail.com">
         OrangeHouseLLC
