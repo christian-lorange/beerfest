@@ -21,14 +21,14 @@ td, th {
 }
 
 th {
-  width:48vw !important;
+  width:100vw !important;
   text-align: center;
   border:none !important;
 
 }
 
 .FIRST th {
-  width:35vw !important;
+  width:100vw !important;
   text-align: center;
   border:none !important;
 
@@ -326,9 +326,7 @@ padding-left:0;
 }
 .heart a{
   color: black;
-      border-style: solid;
-    border-radius: 15px;
-    width: 30px;
+
 }
 
 
@@ -529,6 +527,13 @@ table#SECOND td:nth-child(7) {
 select.table-autofilter {
     margin-left: 5px !important;
 }
+
+th.table-filterable {
+
+    display: inline-table;
+}
+
+
 
 .rating {
   width:22vw !important;

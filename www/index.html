@@ -489,6 +489,11 @@ console.log('Run Complete?');
 
 <script type="text/javascript">
   window.onload = local;
+          
+
+        if ($(this).next().attr('class') == 'table-autofilter') {
+          $(this).remove();
+    }
 
 </script>
 
