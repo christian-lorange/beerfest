@@ -1,353 +1,333 @@
-<!doctype html>
-<html lang="en" ng-app="personList">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>BeerFestival</title>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/common.css">
-
+  <title>BeerFestival</title>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
   <style type="text/css">
-    /* Padding around filters */
-select.table-autofilter {
-    margin-left: 5px !important;
-}
-  </style>
+     /* Padding around filters */
+  select.table-autofilter {
+     margin-left: 5px !important;
+  }
+  </style><!--<script src="js/admob2.js"></script>-->
 
-
-
- <!--<script src="js/admob2.js"></script>-->
- <script src="js/jquery-3.2.1.js"></script>
-
-
-  <script src="js/bootstrap.js"></script>
-   	<script src="js/app.js"></script>
-    <script src="js/table.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-	
-
-
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <script src="js/jquery-3.2.1.js">
+  </script>
+  <script src="js/bootstrap.js">
+  </script>
+  <script src="js/app.js">
+  </script>
+  <script src="js/table.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script><!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+  <!--Trigger interstitial add after 90 seconds -->
 
-<!--Trigger interstitial add after 90 seconds -->
-<script type="text/javascript">
-setTimeout("CallButton()",90000)
-function CallButton()
-{
-   document.getElementById("showAd").click();    
-}
-</script>
+  <script type="text/javascript">
+  setTimeout("CallButton()",90000)
+  function CallButton()
+  {
+    document.getElementById("showAd").click();    
+  }
+  </script><!--Star Rating -->
 
-<!--Star Rating -->
-<script type="text/javascript">
-	$(':radio').change(function() {
-  console.log('New star rating: ' + this.value);
-});
-</script>
-
+  <script type="text/javascript">
+     $(':radio').change(function() {
+   console.log('New star rating: ' + this.value);
+  });
+  </script>
 </head>
-
-
-
-<body >
-
-<nav id="navigation">
-   <a data-scroll class="hov-color-green" href="#foco">Home</a>
-  <a data-scroll class="hov-color-red" href="#schedule" >Tap List</a>
-  <a data-scroll class="hov-color-green" href="#favorites" >My Beer List</a>
-  <a data-scroll class="hov-color-blue" href="#faq">Map</a>
-</nav>
-
-
-
-<section id="foco" class="wide">
-
-<h1 class="headers" style="padding-top: -20px;"><img src="img/banner.jpg" alt="FocoBanner" style="width: 100vw;"></h1>
-<div style="font-size: 0.7em; text-align: center; padding-left:5px; padding-right: 8px;">
-<h4>What is this?</h4>
-<p>We developed this app out of our own need. FoCoMX is always a fun weekend but it can also be a bit overwhelming. So many bands! So little time! We built this app to help us get the most out of FoCoMX (one of the best weekends of the year). We have done our best to get an accurate list of bands and venues around town; you can filter the list be day, venue, band, and style as well as shows you want to see to your personal list.</p>
-<h4>Is this an official app for FoCoMX?</h4>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" style="width:95vw !important;">
+<body>
+  <nav id="navigation">
+    <a class="hov-color-green" data-scroll="" href="#foco">Home</a> <a class="hov-color-red" data-scroll="" href="#schedule">Tap List</a> <a class="hov-color-green" data-scroll="" href="#favorites">My Beer List</a> <a class="hov-color-blue" data-scroll="" href="#faq">Map</a>
+  </nav>
+  <section class="wide" id="foco">
+    <h1 class="headers" style="padding-top: -20px;"><img alt="FocoBanner" src="img/banner.jpg" style="width: 100vw;"></h1>
+    <div style="font-size: 0.7em; text-align: center; padding-left:5px; padding-right: 8px;">
+      <h4>BeerFest 2018</h4>
+      <p>BeerFest is an opportunity to taste some of the very best craft beers [ENTER YOUR STATE HERE] has to offer. We have over 60 breweries and 250 beers to sample during this weekend.</p>
+      <p>Have fun. Be Responsbile. Make Sure to Participate and Select Your Favorite Beers for the People's Choice Award.</p>
+      
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading1">
             <h4 class="panel-title">
                 <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                    Read More
+                    Schedule for the Weekend
                 </a>
             </h4>
         </div>
         <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
             <div class="panel-body">
-                <p><p>Nope - It's a way to search and filter band and concert information for the 2018 FoCoMX music festival. For official information on the festival check out <a href="http://focomx.focoma.org/" target="_blank" title="main focomx page" style="color: black">FoCoMX.</a> <a href="http://www.focoma.org/" target="_blank" title="main focoma page" style="color: black;">The Fort Collins Music Association</a> does great work. We really encourage you to check them out, voluteer, and donate. Lets all do what we can to support the Fort Collins music scene.</p>
-<h4>What's the catch? Why'd you put this together</h4>
-<p>A couple reasons: First, we love music - simple as that.  Second, we had a lot of yard work to do around the house. It was either develop this app or pick weeds - you're welcome we decided to be "productive." Finally, we run a part time freelance consulting company in addition to our day jobs. We'd been meaning to develop a similar tool for some other projects and this was a good excuse to finally get it done.</p>
- 
-<h4 style="text-align: center;">Interested in what we do? Check out some of our other projects</h4>
- 
- 
-    <div class="sponsor"><a href="https://orangehousellc.com/" target="_blank" title="main focoma page" style="color: black;"><img src="img/s1.png" alt="FocoBanner" class="sponsor"></a><a href="https://csamobile.orangehousellc.com/" target="_blank" title="main focoma page" style="color: black;"><img src="img/s2.png" alt="FocoBanner" class="sponsor"></a><a href="https://virtualbarback.com/" target="_blank" title="main focoma page" style="color: black;"><img src="img/s3.png" alt="FocoBanner" class="sponsor"></a>
+                <p></p>
+            </div>
+        </div>
     </div>
-
-<h4 style="text-align: center;">Thirsty? Looking for a deal near by? Check out our Fort Collins Happy Hour App</h4>
- 
- 
-    <div class="sponsor"><a href="https://play.google.com/store/apps/details?id=com.orangehousehappyhour.app" target="_blank" title="main focoma page" style="color: black;"><img src="img/hhap.png" alt="FocoBanner" class="sponsor"></a>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading2">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    BeerFest FAQs
+                </a>
+            </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+            <div class="panel-body">
+                <p></p>
+            </div>
+        </div>
     </div>
-
-<h4 style="text-align: center;">Why is it called FoCo Gorilla Music?</h4>
- <p>I wanted to call it FoCo Squirrel Music but turns out I have a really hard time spelling squirrel correctly.</p>
-
-</p>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading3">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    Using the App 101
+                </a>
+            </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+            <div class="panel-body">
+                <p></p>
             </div>
         </div>
     </div>
 </div>
-
-</div>
-
-
-
-   
-</section>
-
-
-
-<section id="schedule" class="wide">
-
-<h1 class="headers">Tap List</h1>
- 
-<!--<input id="myInput" type="text" value="" /><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button> -->
-
-
-<TABLE ID="SECOND" class="table-autosort table-autofilter SECOND cards-table"> 
-  <thead>
-                        <tr>
-                          <th style="display:none;">ID</th>
-                            <th class="logo_banner" style="display: none;">Logo</th>
-                            <th class="table-filterable">Brewery</th>
-                            <th style="display: none;">Beer</th>
-                            <th class="table-filterable">Beer Style</th>
-                            <th class="table-sortable:numeric" style="display: none;">% Alcohol</th>
-                            <th class="table-sortable:numeric" style="display: none;">IBU</th>
-                            <th style="display: none;">Learn More</th>
-                            <th class="table-sortable:numeric" style="display: none;">Rating </th>
-                
-                        </tr>
-                    </thead>
-<tbody>
-        <tr class="content">
-            <td class="sortnr" style="display:none;">1</td>
-            <td class="logo_banner"><button onclick="openModal();currentSlide(384)"><img src="img/breweries/1.jpg" class="brew_logo"></button></td>
-            <td class="tpl">Friends Brewing</td>
-            <td class="tpl"><button onclick="openModal();currentSlide(384)">IPA</button></td>
-            <td class="middlerow">IPA</td>
-            <td class="bottomrow">6.7%</td>
-            <td class="bottomrow">60 IBU</td>
-            <td class="rating">
-<select name="my_input" class="remember-selection" id="rem_star">
-                    <option value="0" selected="selected">Score</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-
-            </td>
-
-
-
-                       
-            <td class="heart">
-                <a href="#favorites">&#9829;</a>
-            </td>
+  </section>
+  <section class="wide" id="schedule">
+    <h1 class="headers">Tap List</h1><!--<input id="myInput" type="text" value="" /><button id="clearbutton" onclick="document.getElementById('myInput').value = ''">&#9940;</button> -->
+    <table class="table-autosort table-autofilter SECOND cards-table" id="SECOND">
+      <thead>
+        <tr>
+          <th style="display:none;">ID</th>
+          <th class="logo_banner" style="display: none;">Logo</th>
+          <th class="table-filterable">Brewery</th>
+          <th style="display: none;">Beer</th>
+          <th class="table-filterable">Beer Style</th>
+          <th class="table-sortable:numeric" style="display: none;">% Alcohol</th>
+          <th class="table-sortable:numeric" style="display: none;">IBU</th>
+          <th style="display: none;">Learn More</th>
+          <th class="table-sortable:numeric" style="display: none;">Rating</th>
         </tr>
-
-
+      </thead>
+      <tbody>
         <tr class="content">
-            <td class="sortnr" style="display:none;">2</td>
-            <td class="logo_banner" ><button onclick="openModal();currentSlide(384)"><img src="img/breweries/2.jpg" class="brew_logo"></button></td>
-            <td class="tpl">Sunny Suds</td>
-            <td class="tpl"><button onclick="openModal();currentSlide(384)">Bucks Sour</button></td>
-            <td class="middlerow">American Pale</td>
-            <td class="bottomrow">9.7%</td>
-            <td class="bottomrow">35 IBU</td>
-            <td class="rating">
-<select name="my_input" class="remember-selection" id="rem_star">
-                      <option value="0" selected="selected">Score</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-
-            </td>
-                        
-
-           
-            <td class="heart">
-                <a href="#favorites">&#9829;</a>
-            </td>
+          <td class="sortnr" style="display:none;">1</td>
+          <td class="logo_banner"><button onclick="openModal();currentSlide(1)"><img class="brew_logo" src="img/breweries/1.jpg"></button></td>
+          <td class="tpl">Friends Brewing</td>
+          <td class="tpl"><button onclick="openModal();currentSlide(1)">IPA</button></td>
+          <td class="middlerow">IPA</td>
+          <td class="bottomrow">6.7%</td>
+          <td class="bottomrow">60 IBU</td>
+          <td class="rating"><select class="remember-selection" id="rem_star" name="my_input">
+            <option selected="selected" value="0">
+              Score
+            </option>
+            <option value="1">
+              1
+            </option>
+            <option value="2">
+              2
+            </option>
+            <option value="3">
+              3
+            </option>
+            <option value="4">
+              4
+            </option>
+            <option value="5">
+              5
+            </option>
+          </select></td>
+          <td class="heart">
+            <a href="#favorites">&#9829;</a>
+          </td>
         </tr>
-
-
-
         <tr class="content">
-            <td class="sortnr" style="display:none;">3</td>
-            <td class="logo_banner"><button onclick="openModal();currentSlide(384)"><img src="img/breweries/2.jpg" class="brew_logo"></button></td>
-             <td class="tpl">Sunny Suds</td>
-            <td class="tpl"><button onclick="openModal();currentSlide(384)">Bucks Sour</button></td>
-            <td class="middlerow">Sour</td>
-            <td class="bottomrow">9.7%</td>
-            <td class="bottomrow">35 IBU</td>
-            <td class="rating">
-<select name="my_input" class="remember-selection" id="rem_star">
-                      <option value="0" selected="selected">Score</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-
-            </td>
-                        
-
-           
-            <td class="heart">
-                <a href="#favorites">&#9829;</a>
-            </td>
+          <td class="sortnr" style="display:none;">2</td>
+          <td class="logo_banner"><button onclick="openModal();currentSlide(2)"><img class="brew_logo" src="img/breweries/2.jpg"></button></td>
+          <td class="tpl">Sunny Suds</td>
+          <td class="tpl"><button onclick="openModal();currentSlide(2)">Bucks Sour</button></td>
+          <td class="middlerow">American Pale</td>
+          <td class="bottomrow">9.7%</td>
+          <td class="bottomrow">35 IBU</td>
+          <td class="rating"><select class="remember-selection" id="rem_star" name="my_input">
+            <option selected="selected" value="0">
+              Score
+            </option>
+            <option value="1">
+              1
+            </option>
+            <option value="2">
+              2
+            </option>
+            <option value="3">
+              3
+            </option>
+            <option value="4">
+              4
+            </option>
+            <option value="5">
+              5
+            </option>
+          </select></td>
+          <td class="heart">
+            <a href="#favorites">&#9829;</a>
+          </td>
         </tr>
-        
-
-
-</tbody>
-</TABLE>
-</section>
-
-
-<section id="favorites" class="wide">
-  <h1 class="headers">My Beer List</h1>
-
- 
-  <TABLE ID="FIRST" class="table-autosort table-autofilter FIRST cards-table">
-  <thead>
-                        <tr>
-                          <th style="display:none;">ID</th>
-                          <th class="logo_banner" style="display: none;">Logo</th>
-                            <th class="table-filterable">Brewery</th>
-                            <th style="display: none;">Beer</th>
-                            <th class="table-filterable">Beer Style</th>
-                            <th class="table-sortable:numeric" style="display: none;">% Alcohol</th>
-                            <th class="table-sortable:numeric" style="display: none;">IBU</th>
-                            <th class="table-sortable:numeric" style="background-color: #90b1e5; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">Rating</th>
-                         
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-</TABLE>
-
-    
-<hr />
-
-</section>
-
-
-
+        <tr class="content">
+          <td class="sortnr" style="display:none;">3</td>
+          <td class="logo_banner"><button onclick="openModal();currentSlide(2)"><img class="brew_logo" src="img/breweries/2.jpg"></button></td>
+          <td class="tpl">Sunny Suds</td>
+          <td class="tpl"><button onclick="openModal();currentSlide(2)">Bucks Sour</button></td>
+          <td class="middlerow">Sour</td>
+          <td class="bottomrow">9.7%</td>
+          <td class="bottomrow">35 IBU</td>
+          <td class="rating"><select class="remember-selection" id="rem_star" name="my_input">
+            <option selected="selected" value="0">
+              Score
+            </option>
+            <option value="1">
+              1
+            </option>
+            <option value="2">
+              2
+            </option>
+            <option value="3">
+              3
+            </option>
+            <option value="4">
+              4
+            </option>
+            <option value="5">
+              5
+            </option>
+          </select></td>
+          <td class="heart">
+            <a href="#favorites">&#9829;</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="wide" id="favorites">
+    <h1 class="headers">My Beer List</h1>
+    <table class="table-autosort table-autofilter FIRST cards-table" id="FIRST">
+      <thead>
+        <tr>
+          <th style="display:none;">ID</th>
+          <th class="logo_banner" style="display: none;">Logo</th>
+          <th class="table-filterable">Brewery</th>
+          <th style="display: none;">Beer</th>
+          <th class="table-filterable">Beer Style</th>
+          <th class="table-sortable:numeric" style="display: none;">% Alcohol</th>
+          <th class="table-sortable:numeric" style="display: none;">IBU</th>
+          <th class="table-sortable:numeric" style="background-color: #90b1e5; border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">Rating</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <hr>
+  </section>
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    <div class="mySlides">
-        <h2 class="artist">Michael Kirkpatrick</h2>
-        <h3 class="artist">Rock-Pop</h3>
-        <p class="artist">This is Michael's 10th FoCoMX. Michael Kirkpatrick is best known as the 2014 Telluride Troubadour, and ringleader of Holler!ween--a Northern Colorado music festival in its 16th year. Michael's sonic affair with music has brought his rich baritone into The Santa Fe Opera, Folk clubs, Rock'nRoll venues and Bluegrass Festivals. Performing over 250 dates a year on guitars, mandolins and voice, Michael brings it all to the theater: sweat, sensuality, tears, and sometimes blood.</p>
+     <div class="mySlides">
+        <img alt="FocoBanner" src="img/breweries/1.jpg" style="height: 40vw;">
+        <h2 class="brewery">Friends Brewery</h2>
+        <h3 class="beer">IBA</h3>
+        <p class="description">A hops forward American IPA with a slight citrius flavor on the backend.</p>
         <div class="artist">
-            <a href="https://www.facebook.com/michaelkirkpatrickmusic" target="_blank" title="Michael Kirkpatrick on Facebook">Facebook</a>
+            <a href="https://www.facebook.com/ccrtributeband/" target="_blank" title="Loud Mary on Facebook">Visit Brewery Page</a>
         </div>
-        <div class="artist">
-            <a href="http://www.michaelkirkpatrickmusic.com/" target="_blank" title="Michael Kirkpatrick">Website</a>
-        </div>
-       
         <br>
         <p style="font-size: 0.8em; font-style: italic;">The links may take a bit to load. The squirrels are working as fast as they can.</p>
           <br>
-        <p style="font-size: 0.8em; font-style: italic;">The content on this page was adapted from the official FoCoMX Website (http://focomx.focoma.org/). Minor changes may have been made to make the content fit within the space available.</p>
+        <div class="widget-head">
+                 <h3>Tasting Notes</h3>
+
+            </div>
+            <div class="widget-content">
+                <textarea class="outer persisted-text" name="pt2" id="persisted-text" rows=5 cols=30></textarea>
+            </div>
     </div>
+
+    <div class="mySlides">
+        <h2 class="brewery">Friends Brewery</h2>
+        <h3 class="beer">IBA</h3>
+        <p class="description">A hops forward American IPA with a slight citrius flavor on the backend.</p>
+        <div class="artist">
+            <a href="https://www.facebook.com/ccrtributeband/" target="_blank" title="Loud Mary on Facebook">Visit Brewery Page</a>
+        </div>
+        <br>
+        <p style="font-size: 0.8em; font-style: italic;">The links may take a bit to load. The squirrels are working as fast as they can.</p>
+          <br>
+        <div class="widget-head">
+                 <h3>Tasting Notes</h3>
+
+            </div>
+            <div class="widget-content">
+                <textarea class="outer persisted-text" name="pt2" id="persisted-text" rows=5 cols=30></textarea>
+            </div>
+    </div>
+
+  </div>
+
+</div>
+    <!-- END OF VENUE CARDS -->
+
+  </div>
+  <section class="wide" id="faq">
+    <h1 class="headers">Locations</h1><img alt="FocoBanner" src="img/map.PNG" style="width: 100%;">
+    <ol>
+      <li>Aggie Theater</li>
+      <li>Avagadro's Number</li>
+      <li>The Colorado Room</li>
+      <li>Downtown Artery</li>
+      <li>Drunken Monkey</li>
+      <li>The East Coast</li>
+      <li>Elliot's Martini Bar</li>
+      <li>Equinox Brewing</li>
+      <li>Everyday Joe's Coffee House</li>
+      <li>Fort Collins Museum of Discovery</li>
+      <li>High Point Bar</li>
+      <li>Hodi's Half Note</li>
+      <li>Illegal Pete's</li>
+      <li>La Luz Mexican Grill</li>
+      <li>The Lyric</li>
+      <li>Magic Rat</li>
+      <li>The Mainline Ale House</li>
+      <li>Moe's Original Bar B Que</li>
+      <li>New Belgium Brewing</li>
+      <li>Odell Brewing Co</li>
+      <li>Prost Brewing Company</li>
+      <li>R Bar and Lounge</li>
+      <li>The Rec Room</li>
+      <li>The Rio Grande</li>
+      <li>Scrumpy's</li>
+      <li>Surfside 7</li>
+      <li>Tap N Handle</li>
+      <li>Tony's Rooftop</li>
+      <li>Washington's FoCo</li>
+      <li>The Whisk(e)y</li>
+      <li>Wolverine Farm</li>
+    </ol>
+  </section>
+  <script type="text/javascript">
+     document.addEventListener("deviceready", onDeviceReady, false);
+  function onDeviceReady() {
+     window.open = cordova.InAppBrowser.open;
    
- 
-<!-- END OF VENUE CARDS -->
-     
-</div>
+  }
 
-</div>
-
-
-
-<section id="faq" class="wide">
-  <h1 class="headers">Locations</h1>
-  <img src="img/map.PNG" alt="FocoBanner" style="width: 100%;">
-  <ol>
-    <li>Aggie Theater</li>
-    <li>Avagadro's Number</li>
-    <li>The Colorado Room</li>
-    <li>Downtown Artery</li>
-    <li>Drunken Monkey</li>
-    <li>The East Coast</li>
-    <li>Elliot's Martini Bar</li>
-    <li>Equinox Brewing</li>
-    <li>Everyday Joe's Coffee House</li>
-    <li>Fort Collins Museum of Discovery</li>
-    <li>High Point Bar</li>
-    <li>Hodi's Half Note</li>
-    <li>Illegal Pete's</li>
-    <li>La Luz Mexican Grill</li>
-    <li>The Lyric</li>
-    <li>Magic Rat</li>
-    <li>The Mainline Ale House</li>
-    <li>Moe's Original Bar B Que</li>
-    <li>New Belgium Brewing</li>
-    <li>Odell Brewing Co</li>
-    <li>Prost Brewing Company</li>
-    <li>R Bar and Lounge</li>
-    <li>The Rec Room</li>
-    <li>The Rio Grande</li>
-    <li>Scrumpy's</li>
-    <li>Surfside 7</li>
-    <li>Tap N Handle</li>
-    <li>Tony's Rooftop</li>
-    <li>Washington's FoCo</li>
-    <li>The Whisk(e)y</li>
-    <li>Wolverine Farm</li>
-</ol>
-
-</section>
-
- 
-
-<script type="text/javascript">
-    document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    window.open = cordova.InAppBrowser.open;
-  
-}
-
-</script>
-
-
-
-<!--  NOT SURE I NEED THIS
+  </script> <!--  NOT SURE I NEED THIS
 
 <script type="text/javascript">
 
@@ -368,134 +348,138 @@ jQuery(document).ready(function($) {
 }(jQuery));
 
 </script>-->
-
- <script type="text/javascript">
-        function filterTable(event) {
-    var filter = event.target.value.toUpperCase();
-    var rows = document.querySelector("#SECOND tbody").rows;
-    
-    for (var i = 0; i < rows.length; i++) {
-        var firstCol = rows[i].cells[0].textContent.toUpperCase();
-        var secondCol = rows[i].cells[1].textContent.toUpperCase();
-        var thirdCol = rows[i].cells[2].textContent.toUpperCase();
-        var fourthCol = rows[i].cells[3].textContent.toUpperCase();
-        var fifthCol = rows[i].cells[4].textContent.toUpperCase();
-        var sixthCol = rows[i].cells[5].textContent.toUpperCase();
-        var seventhCol = rows[i].cells[6].textContent.toUpperCase();
-        var eigthCol = rows[i].cells[7].textContent.toUpperCase();
-          if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1 || seventhCol.indexOf(filter) > -1|| eigthCol.indexOf(filter) > -1) {
-            rows[i].style.display = "";
-        } else {
-            rows[i].style.display = "none";
-        }      
-    }
-
-
-
-}
-
-function sortT(){
-
-    var tbl = document.getElementById("FIRST").tBodies[0];
-    var store = [];
-    for(var i=0, len=tbl.rows.length; i<len; i++){
-        var row = tbl.rows[i];
-        var sortnr = parseFloat(row.cells[0].textContent || row.cells[0].innerText);
-        if(!isNaN(sortnr)) store.push([sortnr, row]);
-    }
-    store.sort(function(x,y){
-        return x[0] - y[0];
-    });
-    for(var i=0, len=store.length; i<len; i++){
-        tbl.appendChild(store[i][1]);
-    }
-    store = null;
-
-}
-
-
-
-document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
-document.querySelector('#clearbutton').addEventListener('click', filterTable, false);
-    </script>
-
-<button id="showAd" style="text-align: center;margin: auto; width: 100vw; height:40px; background: black; color: white; font-weight: bolder;">Show Some Support by Looking at an Ad!</button>
-<script type="text/javascript" src="cordova.js"></script>
-
-<!--<script type="text/javascript" src="js/admob2.js"></script>-->
-<script type="text/javascript" src="phonegap.js"></script>
-
-<!--Script to change _blank hrefs to exteral  -->
-
-<script type="text/javascript">
-    $("a[target='_blank']").click(function(e){
-  e.preventDefault();
-  window.open($(e.currentTarget).attr('href'), '_system', '');
-});
-</script>
-
-
-<script type="text/javascript">
-$('.remember-selection').each(function(r) {
-    var thisSelection = $(this);
-    var thisId = thisSelection.attr('id');
-    var storageId = 'remember-selection-' + thisId;
-    var storedInfo = localStorage.getItem(storageId);
-    if( storedInfo ) {
-      var rememberedOptions = storedInfo.split(',');
-        thisSelection.val( rememberedOptions );
-    };
-    thisSelection.on('change', function(e) {
-        var selectedOptions = [];
-        thisSelection.find(':selected').each(function(i) {
-            var thisOption = $(this);
-            selectedOptions.push(thisOption.val());
-        });
-        localStorage.setItem(storageId, selectedOptions.join(','));
-    });
-});
-</script>
-
-
+   
   <script type="text/javascript">
-        function local() {
-setTimeout(function(){
-     $('.remember-selection').each(function(r) {
-    var thisSelection = $(this);
-    var thisId = thisSelection.attr('id');
-    var storageId = 'remember-selection-' + thisId;
-    var storedInfo = localStorage.getItem(storageId);
-    if( storedInfo ) {
-      var rememberedOptions = storedInfo.split(',');
-        thisSelection.val( rememberedOptions );
-    };
-    thisSelection.on('change', function(e) {
-        var selectedOptions = [];
-        thisSelection.find(':selected').each(function(i) {
-            var thisOption = $(this);
-            selectedOptions.push(thisOption.val());
-        });
-        localStorage.setItem(storageId, selectedOptions.join(','));
-    });
-});
-
-console.log('Run Complete?');
-}, 200);
+         function filterTable(event) {
+     var filter = event.target.value.toUpperCase();
+     var rows = document.querySelector("#SECOND tbody").rows;
+     
+     for (var i = 0; i < rows.length; i++) {
+         var firstCol = rows[i].cells[0].textContent.toUpperCase();
+         var secondCol = rows[i].cells[1].textContent.toUpperCase();
+         var thirdCol = rows[i].cells[2].textContent.toUpperCase();
+         var fourthCol = rows[i].cells[3].textContent.toUpperCase();
+         var fifthCol = rows[i].cells[4].textContent.toUpperCase();
+         var sixthCol = rows[i].cells[5].textContent.toUpperCase();
+         var seventhCol = rows[i].cells[6].textContent.toUpperCase();
+         var eigthCol = rows[i].cells[7].textContent.toUpperCase();
+           if (firstCol.indexOf(filter) > -1 || secondCol.indexOf(filter) > -1 || thirdCol.indexOf(filter) > -1 || fourthCol.indexOf(filter) > -1 || fifthCol.indexOf(filter) > -1 || sixthCol.indexOf(filter) > -1 || seventhCol.indexOf(filter) > -1|| eigthCol.indexOf(filter) > -1) {
+             rows[i].style.display = "";
+         } else {
+             rows[i].style.display = "none";
+         }      
+     }
 
 
-    
-                                }
-        </script>
 
-<script type="text/javascript">
-  window.onload = local;
-          
+  }
 
-        if ($(this).next().attr('class') == 'table-autofilter') {
-          $(this).remove();
-    }
+  function sortT(){
 
-</script>
+     var tbl = document.getElementById("FIRST").tBodies[0];
+     var store = [];
+     for(var i=0, len=tbl.rows.length; i<len; i++){
+         var row = tbl.rows[i];
+         var sortnr = parseFloat(row.cells[0].textContent || row.cells[0].innerText);
+         if(!isNaN(sortnr)) store.push([sortnr, row]);
+     }
+     store.sort(function(x,y){
+         return x[0] - y[0];
+     });
+     for(var i=0, len=store.length; i<len; i++){
+         tbl.appendChild(store[i][1]);
+     }
+     store = null;
 
+  }
+
+
+
+  document.querySelector('#myInput').addEventListener('keyup', filterTable, false);
+  document.querySelector('#clearbutton').addEventListener('click', filterTable, false);
+  </script> <button id="showAd" style="text-align: center;margin: auto; width: 100vw; height:40px; background: black; color: white; font-weight: bolder;">Show Some Support by Looking at an Ad!</button> 
+  <script src="cordova.js" type="text/javascript">
+  </script> <!--<script type="text/javascript" src="js/admob2.js"></script>-->
+  <script src="phonegap.js" type="text/javascript">
+  </script> <!--Script to change _blank hrefs to exteral  -->
+   
+  <script type="text/javascript">
+     $("a[target='_blank']").click(function(e){
+   e.preventDefault();
+   window.open($(e.currentTarget).attr('href'), '_system', '');
+  });
+  </script> 
+  <script type="text/javascript">
+  $('.remember-selection').each(function(r) {
+     var thisSelection = $(this);
+     var thisId = thisSelection.attr('id');
+     var storageId = 'remember-selection-' + thisId;
+     var storedInfo = localStorage.getItem(storageId);
+     if( storedInfo ) {
+       var rememberedOptions = storedInfo.split(',');
+         thisSelection.val( rememberedOptions );
+     };
+     thisSelection.on('change', function(e) {
+         var selectedOptions = [];
+         thisSelection.find(':selected').each(function(i) {
+             var thisOption = $(this);
+             selectedOptions.push(thisOption.val());
+         });
+         localStorage.setItem(storageId, selectedOptions.join(','));
+     });
+  });
+  </script> 
+  <script type="text/javascript">
+         function local() {
+  setTimeout(function(){
+      $('.remember-selection').each(function(r) {
+     var thisSelection = $(this);
+     var thisId = thisSelection.attr('id');
+     var storageId = 'remember-selection-' + thisId;
+     var storedInfo = localStorage.getItem(storageId);
+     if( storedInfo ) {
+       var rememberedOptions = storedInfo.split(',');
+         thisSelection.val( rememberedOptions );
+     };
+     thisSelection.on('change', function(e) {
+         var selectedOptions = [];
+         thisSelection.find(':selected').each(function(i) {
+             var thisOption = $(this);
+             selectedOptions.push(thisOption.val());
+         });
+         localStorage.setItem(storageId, selectedOptions.join(','));
+     });
+  });
+
+  console.log('Run Complete?');
+  }, 200);
+
+
+     
+                                 }
+  </script> 
+  <script type="text/javascript">
+   window.onload = local;
+           
+
+         if ($(this).next().attr('class') == 'table-autofilter') {
+           $(this).remove();
+     }
+
+  </script> 
+  <script type="text/javascript">
+   
+  var supported = 'Add Your Tasting Notes',
+     unsupported = 'Oh no! Your browser does not support localStorage.';
+  if (window.localStorage) {
+     $('.persisted-text').keyup(function () {
+         localStorage.setItem(this.name, this.value);
+     }).val(function () {
+         return localStorage.getItem(this.name) || supported
+     })
+  } else {
+     $('.persisted-text').val(unsupported);
+  }
+  </script>
 </body>
 </html>
