@@ -32,12 +32,14 @@ th {
   text-align: center;
   border:none !important;
 
+
 }
 
 
 table {
   margin-bottom: 40px;
   text-align: center;
+  border:0 !important;
 }
 
 table, td, th, input {
@@ -51,6 +53,8 @@ table, td, th, input {
 input {
   padding: 4px 12px;
 }
+
+
 
 label {
   margin-right: 14px;
@@ -181,13 +185,13 @@ tr {
     margin-bottom: 1.5rem;
    
     margin-bottom:0px;
-  
     box-shadow: 0 0 1rem transparentize( black, 0.9 );
+    padding-bottom: 10px;
 
 }
 
-tr:nth-child(even) {background: white}
-tr:nth-child(odd) {background: #c7eaea}
+tr:nth-child(even) {background: #ffbe55}
+tr:nth-child(odd) {background: #ff6955}
 
 td {
     display: inline-block;
@@ -226,7 +230,7 @@ td:empty {
 }
 
 td.tpl {
-width:44.0vw !important;
+width:47.0vw !important;
 text-align: center;
 height: 35px;
 vertical-align: middle !important;
@@ -234,9 +238,15 @@ padding-top: 5px;
 border-radius: 15px;
 box-shadow: 0 4px 8px 0 rgba(0, 40, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-weight: bold;
-font-size: 0.7em;
-background-color: #FAD7A0;
+font-size: 0.85em;
+background-color: #55b0ff;
+color: black;
+border-color:white;
+border-width: 1.5px;
 }
+
+
+
 td.tpl button {
   width:45.7vw !important;
 text-align: center;
@@ -244,7 +254,7 @@ height: 35px;
 vertical-align: middle !important;
 padding-top: 0px;
 background-color: transparent;
-color: #555;
+color: black;
 border: none;
 font-weight: bold;
 
@@ -450,7 +460,7 @@ a {
 
 
 #faq {
-  background-color: #1d8c51;
+  background-color: #55b0ff;
   padding-top: 80px;
 }
 
@@ -470,7 +480,10 @@ vertical-align: middle !important;}
 
 img.brew_logo {height:60px;
 vertical-align: middle !important;
-background:none;}
+background:none;
+box-shadow: 2px 2px #55b0ff;
+border-radius: 12px;
+}
 
 td.logo_banner button {
   width:45.7vw !important;
@@ -479,6 +492,7 @@ padding-top: 0px;
 background-color: none;
 border: none;
 background:none;
+
 }
 
 .sponsor {text-align: center;}
@@ -537,4 +551,13 @@ th.table-filterable {
 
 .rating {
   width:22vw !important;
+ }
+
+ ol {padding-top:10px !important;}
+
+ select {
+    -webkit-border-radius: 2px !important;
+   -moz-border-radius: 2px !important;
+   border-radius: 2px !important;
+   background-color: #55b0ff; 
  }
