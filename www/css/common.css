@@ -556,8 +556,10 @@ th.table-filterable {
  ol {padding-top:10px !important;}
 
  select {
-    -webkit-border-radius: 2px !important;
-   -moz-border-radius: 2px !important;
-   border-radius: 2px !important;
-   background-color: #55b0ff; 
+    -webkit-border-radius: 5px !important;
+   -moz-border-radius: 5px !important;
+   border-radius: 5px !important;
+ 
  }
+
+ .textpadding {padding-bottom: 150vw;}
